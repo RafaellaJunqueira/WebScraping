@@ -1,0 +1,6 @@
+1. Instalar o driver (chrome driver ou firefox driver). Ele depende do seu sistema operacional. Utilizando esse link: https://github.com/mozilla/geckodriver/releases 
+
+2. Instalar selenium 
+``` sudo pip install selenium ```
+
+3. 
