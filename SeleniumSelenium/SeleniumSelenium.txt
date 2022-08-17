@@ -11,4 +11,4 @@ Caso seja windows, basta colocar os drivers dentro da pasta do projeto.
 2. Instalar selenium 
 ``` sudo pip install selenium ```
 
-3. 
+3. Para usar as funções de buscar por elementos, é preciso importar especificamente o By do selenium.webdriver.common.by. Alterações foram feitas no selenium em 2022.
