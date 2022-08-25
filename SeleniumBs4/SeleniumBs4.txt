@@ -1,0 +1,5 @@
+- Primeiro foi necessário instalar o beautiful soup (pip3 install beautifulsoup4)
+- importar do bs4
+- Falar sobre os parsers do bs4 (porque lxl é mais rápido que html.parser e tudo mais)
+- Os sites que demoram muito podem dar timeout. É possível tratar isso aumentando o tempo e/ou criando estratégias para que o case execute seu script sem necessitar de reiniciação manual.
+- 
