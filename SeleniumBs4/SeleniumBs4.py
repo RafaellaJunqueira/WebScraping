@@ -1,4 +1,3 @@
-from cgitb import html
 import time
 from time import sleep
 from bs4 import BeautifulSoup
@@ -13,11 +12,9 @@ def search_name(**in_args):
     driver.find_element(By.XPATH, '//option[@value="PARTE_OU_ADVOGADO"]').click()
     driver.find_element(By.ID, 'pesquisaPrincipalParteAdvogado').send_keys(user_input)
     driver.find_element(By.ID, 'btnPesquisar').click()
-    driver.refresh()
     
     # Extracao com Beautiful Soup
-    html = driver.find_element(By.CSS_SELECTOR, 'html')
-    html_page = html.get_attribute("innerHTML")
+    html_page = driver.page_source
     soup = BeautifulSoup(html_page, 'lxml')
     result_table = soup.find('table')
     headers = result_table.findAll('th')
@@ -33,7 +30,7 @@ def search_name(**in_args):
         result_list.append(temp_dict.copy())
 
     print(f'RESULTADO: {result_list}')
-    
+    driver.quit()
 
 
 if __name__ == '__main__':
