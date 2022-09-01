@@ -1,6 +1,4 @@
-from mimetypes import init
 import time
-from time import sleep
 import requests
 from selenium.webdriver.common.by import By
 
@@ -19,7 +17,6 @@ class RequestResponse:
         'processoPublicidade': 'Publicidade do processo',
         'processoEmTramitacao': 'Processo em tramitacao'
     }
-
 
 class My_Requests():
 
