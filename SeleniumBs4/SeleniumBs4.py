@@ -8,22 +8,23 @@ def search_name(**in_args):
     user_input = in_args['name']
     driver = webdriver.Chrome()
     driver.get('https://portal.stf.jus.br/')
-    sleep(2)
+    driver.implicitly_wait(2)
     driver.find_element(By.XPATH, '//option[@value="PARTE_OU_ADVOGADO"]').click()
     driver.find_element(By.ID, 'pesquisaPrincipalParteAdvogado').send_keys(user_input)
     driver.find_element(By.ID, 'btnPesquisar').click()
+    sleep(3)
     
     # Extracao com Beautiful Soup
     html_page = driver.page_source
     soup = BeautifulSoup(html_page, 'lxml')
     result_table = soup.find('table')
-    headers = result_table.findAll('th')
+    headers = result_table.find_all('th')
     lines = result_table.select('tr:not(:first-child)')
     
     result_list = list()
     for line in lines:
         temp_dict = dict()
-        cells = line.findAll('td')
+        cells = line.find_all('td')
         for index, cell in enumerate(cells):
             if cell.text != '':
                 temp_dict[headers[index].text] = cell.text
