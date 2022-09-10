@@ -1,5 +1,4 @@
 import time
-from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -7,11 +6,11 @@ def search_name(**in_args):
     user_input = in_args['name']
     driver = webdriver.Chrome()
     driver.get('https://portal.stf.jus.br/')
-    sleep(2)
+    driver.implicitly_wait(2)
     driver.find_element(By.XPATH, '//option[@value="PARTE_OU_ADVOGADO"]').click()
     driver.find_element(By.ID, 'pesquisaPrincipalParteAdvogado').send_keys(user_input)
     driver.find_element(By.ID, 'btnPesquisar').click()
-    driver.refresh()
+    # driver.refresh()
     result_table = driver.find_element(By.TAG_NAME, 'table')
     headers = result_table.find_elements(By.TAG_NAME, 'th')
     lines = result_table.find_elements(By.CSS_SELECTOR, 'tr:not(:first-child)')

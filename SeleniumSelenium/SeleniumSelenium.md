@@ -4,7 +4,7 @@ Ele depende do seu sistema operacional e da versão do seu navegador, então ate
     - Firefox: https://github.com/mozilla/geckodriver/releases
 
 Para que o driver possa ser utilizado em ambiente Linux, basta rodar o comando, assim, seus drives ficarão no core da máquina.
-```sudo mv chromedriver /src/bin``` ou ```sudo mv geckodriver /src/bin``
+```sudo mv chromedriver /src/bin``` ou ```sudo mv geckodriver /src/bin```
 
 Caso seja windows, basta colocar os drivers dentro da pasta do projeto.
 
