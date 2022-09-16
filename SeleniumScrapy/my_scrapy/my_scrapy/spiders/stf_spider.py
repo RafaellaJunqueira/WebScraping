@@ -1,4 +1,5 @@
 from time import sleep
+import time
 from turtle import pd
 import scrapy
 from scrapy import Selector
@@ -9,12 +10,16 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class STFSpider(scrapy.Spider):
+    start = time.time()
+
     name = "stf_spider"
     start_urls = ["https://portal.stf.jus.br/"]
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.driver = webdriver.Firefox()
+        firefox_options = webdriver.FirefoxOptions()
+        firefox_options.add_argument("--headless")
+        self.driver = webdriver.Firefox(options=firefox_options)
         self.wait = WebDriverWait(self.driver, 10)
 
     def parse(self, response, **kwargs):
@@ -34,7 +39,6 @@ class STFSpider(scrapy.Spider):
 
         processes = selector.xpath('//table[@id="tabela_processos"]//tr')[1:]
         for process in processes:
-            import pdb; pdb.set_trace()
             item = {
                 "Identificação": process.xpath('./td[1]/a/text()').get(),
                 "Parte": process.xpath('./td[2]/text()').get(),
@@ -47,4 +51,13 @@ class STFSpider(scrapy.Spider):
             result.append(item)
 
         print(result)
+        end = time.time()
         self.driver.quit()
+        print(f'TEMPO DE EXECUÇÃO: {end - self.start}\n\n\n')
+
+
+if __name__ in '__main__':
+    start = time.time()
+    stf = STFSpider()
+    end = time.time()
+    print(f'TEMPO DE EXECUÇÃO: {end - start}\n\n\n')

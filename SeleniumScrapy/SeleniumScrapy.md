@@ -6,11 +6,16 @@ pip3 install scrapy
 - O scrapy é um framework mas não sabe lidar com páginas dinâmicas (javascrpit) então ele consegue raspar páginas estáticas mas se tiver que clicar em algo até chegar onde se deseja ou se o carregamento do conteúdo estiver dentro de um javascript (como iframe, por exemplo), ele nao vai conseguir.
 
 - Eu iniciei um projeto inteiro de scrapy com o comando abaixo. Isso deu a ele um nome, my_scrapy, e fez ele iniciailizar na minha pasta todo o projeto com um monte de pastas base.
+
 ```
 scrapy startproject my_scrapy
 ```
 
-- É preciso entrar no projeto dele, no caso aqui, se chama my_scrapy ```cd my_scrapy``` e depois criar um spider específico pro seu projeto, utilizando ```scrapy genspider <nome_que_quiser> <site_que_quiser>```
+- É preciso entrar no projeto dele, no caso aqui, se chama my_scrapy ```cd my_scrapy``` e depois criar um spider específico pro seu projeto, utilizando 
+
+```
+scrapy genspider <nome_que_quiser> <site_que_quiser>
+```
 
 - Ele cria um arquivo com o nome que voce colocou na estrutura do projeto, na parte dos spiders.
 
