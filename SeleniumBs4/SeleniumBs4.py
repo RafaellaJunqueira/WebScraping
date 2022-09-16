@@ -6,7 +6,16 @@ from selenium.webdriver.common.by import By
 
 def search_name(**in_args):
     user_input = in_args['name']
-    driver = webdriver.Chrome()
+    # Opção para headless Chrome. Para tirar o headless, é só remover o argumento 'options' do driver
+    # chrome_options = webdriver.ChromeOptions()
+    # chrome_options.add_argument("--headless")
+    # driver = webdriver.Chrome(options=chrome_options)
+
+    # Opção para headless Firefox. Para tirar o headless, é só remover o argumento 'options' do driver
+    firefox_options = webdriver.FirefoxOptions()
+    firefox_options.add_argument("--headless")
+    driver = webdriver.Firefox(options=firefox_options)
+
     driver.get('https://portal.stf.jus.br/')
     driver.implicitly_wait(2)
     driver.find_element(By.XPATH, '//option[@value="PARTE_OU_ADVOGADO"]').click()
@@ -30,7 +39,7 @@ def search_name(**in_args):
                 temp_dict[headers[index].text] = cell.text
         result_list.append(temp_dict.copy())
 
-    print(f'RESULTADO: {result_list}')
+    # print(f'RESULTADO: {result_list}')
     driver.quit()
 
 
