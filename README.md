@@ -51,6 +51,9 @@ Este repositório destina-se aos scripts de extração de dados, utilizando ferr
 
 - Executar o script: ```python3 SeleniumScrapy.py```
 
+### Executar script para tempos de execução
+Na raíz do projeto, executar: ```python3 expTimes.py```
+
 
 <!-- 
 ## Referências - dicas
