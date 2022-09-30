@@ -24,6 +24,33 @@ Este repositório destina-se aos scripts de extração de dados, utilizando ferr
 
 7. Scrapy ```pip3 install scrapy```
 
+### Execução dos códigos
+
+1. Clone o repositório ```git clone https://github.com/RafaellaJunqueira/WebScraping.git```
+2. Executar experimento 1 (Selenium)
+- Acessar o diretório do experimento:
+``` cd SeleniumSelenium ```
+
+- Executar o script: ```python3 SeleniumSelenium.py```
+
+3. Executar experimento 2 (Selenium + Beautiful Soup)
+- Acessar o diretório do experimento:
+``` cd SeleniumBs4 ```
+
+- Executar o script: ```python3 SeleniumBs4.py```
+
+4. Executar experimento 3 (Requisição em API)
+- Acessar o diretório do experimento:
+``` cd Requests ```
+
+- Executar o script: ```python3 Requests.py```
+
+5. Executar experimento 4 (Selenium e Scrapy)
+- Acessar o diretório do experimento:
+``` cd SeleniumScrapy ```
+
+- Executar o script: ```python3 SeleniumScrapy.py```
+
 
 <!-- 
 ## Referências - dicas
