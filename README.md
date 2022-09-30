@@ -1,6 +1,9 @@
 # Extração de dados em ambiente Web
 Este repositório destina-se aos scripts de extração de dados, utilizando ferramentas e tecnologias para web scraping, como parte prática do Trabalho de Conclusão de Curso 2 em Engenharia de Software.
 
+### Licença
+Todos os experimentos deste projeto foram criados e executados para fins acadêmicos, como forma de analisar ferramentas e métodos de extração de dados. Nenhum _script_ foi ou será utilizado para denegriar a imagem da instituição fonte ou para corromper dados acessados.
+
 ### Pré-requisitos:
 1. Python3 ``` sudo apt-get install python3 ```
 
