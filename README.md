@@ -50,9 +50,9 @@ Todos os experimentos deste projeto foram criados e executados para fins acadêm
 
 5. Executar experimento 4 (Selenium e Scrapy)
 - Acessar o diretório do experimento:
-``` cd SeleniumScrapy ```
+``` cd SeleniumScrapy/my_scrapy ```
 
-- Executar o script: ```python3 SeleniumScrapy.py```
+- Executar o script: ```scrapy crawl stf_spider```
 
 ### Executar script para tempos de execução
 Na raíz do projeto, executar: ```python3 expTimes.py```
