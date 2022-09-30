@@ -57,6 +57,8 @@ Todos os experimentos deste projeto foram criados e executados para fins acadêm
 ### Executar script para tempos de execução
 Na raíz do projeto, executar: ```python3 expTimes.py```
 
+### Memorandos
+Cada experimento teve a experiência de desenvolvimento relatada desde de ponta a ponta. O documento descreve o passo a passo para atingir o resultado esperado, os desafios enfrentados e aprendizados durante o processo. Cada diretório contempla um experimento e seu respectivo memorando.   
 
 <!-- 
 ## Referências - dicas
